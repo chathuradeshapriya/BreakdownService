@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'MyProfile.dart';
+
 
 class Navigation extends StatefulWidget {
   const Navigation({Key? key}) : super(key: key);
@@ -30,8 +32,8 @@ class _NavigationState extends State<Navigation> {
             ElevatedButton(
               onPressed: () {
                 // validateForm();
-                // Navigator.push(
-                //     context, MaterialPageRoute(builder: (c) => MyProfile()));
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (c) => MyProfile()));
               },
               child: Row(
                 children: [

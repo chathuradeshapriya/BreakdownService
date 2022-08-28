@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:vehicle_breakdown_service/navigation.dart';
 import 'package:vehicle_breakdown_service/user_login.dart';
-import 'MyProfile.dart';
 import 'log_in.dart';
 
 
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: MyProfile(),
+      home: Navigation(),
     );
   }
 }

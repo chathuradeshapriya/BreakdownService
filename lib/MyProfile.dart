@@ -26,8 +26,7 @@ class _MyProfileState extends State<MyProfile> {
       appBar: AppBar(
         leading: ElevatedButton(
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (c) => Navigation()));
+     
           },
           child: Icon(
             Icons.arrow_back,
