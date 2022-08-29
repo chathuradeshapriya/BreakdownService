@@ -11,7 +11,38 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
+  String fromdropdownvalue = 'January';
+  String todropdownvalue = 'January';
 
+  var fromMonth = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
+
+  var toMonth = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -91,7 +122,73 @@ class _DashboardState extends State<Dashboard> {
                 height: 20,
               ),
 
-       
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+
+                      Text(
+                        "From : ",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14.0,
+                        ),
+                      ),
+                      DropdownButtonHideUnderline(
+                          child: DropdownButton(
+                            borderRadius: BorderRadius.circular(15.0),
+                            dropdownColor: Colors.purple[50],
+                            elevation: 50,
+                            value: fromdropdownvalue,
+                            icon: Icon(Icons.keyboard_arrow_down),
+                            items: fromMonth.map((String items) {
+                              return DropdownMenuItem(
+                                  value: items, child: Text(items));
+                            }).toList(),
+                            onChanged: (String? newValue) {
+                              setState(() {
+                                fromdropdownvalue = newValue!;
+                              });
+                            },
+                          )),
+                    ],
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        "To : ",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14.0,
+                        ),
+                      ),
+                      DropdownButtonHideUnderline(
+                          child: DropdownButton(
+                            borderRadius: BorderRadius.circular(15.0),
+                            dropdownColor: Colors.purple[50],
+                            elevation: 50,
+                            value: todropdownvalue,
+                            icon: Icon(Icons.keyboard_arrow_down),
+                            items: toMonth.map((String items) {
+                              return DropdownMenuItem(
+                                  value: items, child: Text(items));
+                            }).toList(),
+                            onChanged: (String? newValue) {
+                              setState(() {
+                                todropdownvalue = newValue!;
+                              });
+                            },
+                          )),
+                    ],
+                  ),
+                ],
+              ),
               const SizedBox(
                 height: 20,
               ),
