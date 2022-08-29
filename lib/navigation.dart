@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'MyProfile.dart';
+import 'dashboard.dart';
 
 
 class Navigation extends StatefulWidget {
@@ -63,8 +64,8 @@ class _NavigationState extends State<Navigation> {
             ElevatedButton(
               onPressed: () {
                 // validateForm();
-     //           Navigator.push(
-   //                 context, MaterialPageRoute(builder: (c) => Dashboard()));
+               Navigator.push(
+                   context, MaterialPageRoute(builder: (c) => Dashboard()));
               },
               child: Row(
                 children: [
