@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'MyProfile.dart';
 import 'dashboard.dart';
+import 'notification.dart';
 
 
 class Navigation extends StatefulWidget {
@@ -94,7 +95,8 @@ class _NavigationState extends State<Navigation> {
 
             ElevatedButton(
               onPressed: () {
-
+               Navigator.push(
+                   context, MaterialPageRoute(builder: (c) => Notifications()));
               },
               child: Row(
                 children: [
