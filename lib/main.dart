@@ -3,6 +3,7 @@ import 'package:vehicle_breakdown_service/dashboard.dart';
 import 'package:vehicle_breakdown_service/navigation.dart';
 import 'package:vehicle_breakdown_service/user_login.dart';
 import 'log_in.dart';
+import 'notification.dart';
 
 
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: Dashboard(),
+      home: Notifications(),
     );
   }
 }

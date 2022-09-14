@@ -94,9 +94,7 @@ class _NavigationState extends State<Navigation> {
 
             ElevatedButton(
               onPressed: () {
-                // validateForm();
-       //         Navigator.push(
-       //             context, MaterialPageRoute(builder: (c) => Notifications()));
+
               },
               child: Row(
                 children: [
