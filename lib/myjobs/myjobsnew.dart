@@ -85,7 +85,10 @@ class _MyJobState extends State<MyJob>
                   child: TabBarView(
                     controller: tabController,
                     children: [
-      
+                      // NewRequest(),
+                      // Processing(),
+                      // FinishedJobs(),
+                      Cancelled(),
                     ],
                   ),
                 )
