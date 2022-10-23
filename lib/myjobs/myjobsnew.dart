@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'cancelled.dart';
+import 'finished_jobs.dart';
 
 
 class MyJob extends StatefulWidget {
@@ -87,7 +88,7 @@ class _MyJobState extends State<MyJob>
                     children: [
                       // NewRequest(),
                       // Processing(),
-                      // FinishedJobs(),
+                      FinishedJobs(),
                       Cancelled(),
                     ],
                   ),
