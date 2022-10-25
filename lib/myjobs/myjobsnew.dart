@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'cancelled.dart';
 import 'finished_jobs.dart';
+import 'new_request.dart';
 
 
 class MyJob extends StatefulWidget {
@@ -86,7 +87,7 @@ class _MyJobState extends State<MyJob>
                   child: TabBarView(
                     controller: tabController,
                     children: [
-                      // NewRequest(),
+                      NewRequest(),
                       // Processing(),
                       FinishedJobs(),
                       Cancelled(),
